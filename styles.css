@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(90deg,#2193b0, #6dd5ed);
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+form input,form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+
+form button {
+    color: #6dd5ed;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    color: #64c3d8;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.todo-li {
+    flex: 1;
+    padding: 0 0.5rem;
+}
+
+.delete-button, .completed-button {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    transition: all 0.3s;
+    background-color: #64c3d8;
+}
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+.completed-button:hover {
+    background-color: rgb(61, 202, 61);
+}
+
+.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+    transition: all 0.5s ease;
+}
+
+.delete-button:hover {
+    background-color: rgb(233, 79, 79);
+}
+
+.delete-todo-animation {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #6dd5ed;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    background: #6dd5ed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: #64c3d8;
+}
