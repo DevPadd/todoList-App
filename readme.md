@@ -7,3 +7,5 @@ theres some features like:
 * save todos to local storage
 
 * delete and check mark the todos
+
+Demo: https://devpadd.github.io/todoList-App/
